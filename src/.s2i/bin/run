@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+
+cd RedisGeo
+
+echo "---> Running data migration..."
+dotnet ef database update
+
+echo "---> Running application ..."
+exec dotnet run
