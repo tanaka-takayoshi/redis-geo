@@ -9,7 +9,7 @@ echo `pwd`
 echo `ls`
 
 echo "---> Build RedisGeo.ServiceModel ..."
-cd src/RedisGeo.ServiceModel
+cd ./RedisGeo.ServiceModel
 dotnet restore
 dotnet build
 
