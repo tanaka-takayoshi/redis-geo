@@ -1,0 +1,20 @@
+#!/bin/bash
+
+set -e
+
+echo "---> Copying application source ..."
+cp -Rf /tmp/src/. ./
+
+echo `pwd`
+echo `ls`
+
+echo "---> Installing dependencies ..."
+dotnet restore
+
+echo "---> Building application from source ..."
+dotnet build /opt/app-root/src/RedisGeo.ServiceModel/project.json
+
+# Fix source directory permissions
+fix-permissions ./
+# set permissions for any installed artifacts
+fix-permissions /opt/app-root
