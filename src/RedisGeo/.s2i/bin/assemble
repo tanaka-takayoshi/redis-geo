@@ -14,7 +14,7 @@ dotnet restore
 dotnet build
 
 echo "---> Build RedisGeo.RedisGeo.ServiceInterface ..."
-cd ../RedisGeo.RedisGeo.ServiceInterface
+cd ../RedisGeo.ServiceInterface
 dotnet restore
 dotnet build
 
