@@ -5,6 +5,8 @@ set -e
 echo "---> Copying application source ..."
 cp -Rf /tmp/src/. ./
 
+echo `pwd`
+
 echo "---> Build RedisGeo.ServiceModel ..."
 cd ../RedisGeo.ServiceModel
 dotnet restore
