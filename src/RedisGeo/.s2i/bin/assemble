@@ -20,6 +20,9 @@ dotnet build
 
 cd ../RedisGeo
 echo "---> Installing dependencies ..."
+echo `pwd`
+echo `ls`
+
 dotnet restore
 
 echo "---> Building application from source ..."
