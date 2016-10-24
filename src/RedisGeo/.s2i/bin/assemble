@@ -12,7 +12,7 @@ echo "---> Installing dependencies ..."
 dotnet restore
 
 echo "---> Building application from source ..."
-dotnet build RedisGeo/project.json
+dotnet build /opt/app-root/src/RedisGeo.ServiceModel/project.json
 
 # Fix source directory permissions
 fix-permissions ./
