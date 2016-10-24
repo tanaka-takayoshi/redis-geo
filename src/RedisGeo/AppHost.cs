@@ -26,7 +26,7 @@ namespace RedisGeo
         public override void Configure(Container container)
         {
             //Requires GEO commands in v4.0.57 pre-release packages from MyGet: https://github.com/ServiceStack/ServiceStack/wiki/MyGet
-            var configuredRedisHost = Environment.GetEnvironmentVariable("AWS_REDIS_HOST") ?? "localhost";
+            var configuredRedisHost = Environment.GetEnvironmentVariable("REDIS_GEO_SERVICE_HOST") ?? "localhost";
             container.Register<IRedisClientsManager>(c => 
                 new RedisManagerPool(AppSettings.Get("RedisHost", defaultValue: $"{configuredRedisHost}:6379")));
 
