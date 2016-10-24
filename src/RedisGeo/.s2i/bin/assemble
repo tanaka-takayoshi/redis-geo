@@ -6,9 +6,10 @@ echo "---> Copying application source ..."
 cp -Rf /tmp/src/. ./
 
 echo `pwd`
+echo `ls`
 
 echo "---> Build RedisGeo.ServiceModel ..."
-cd ../RedisGeo.ServiceModel
+cd src/RedisGeo.ServiceModel
 dotnet restore
 dotnet build
 
