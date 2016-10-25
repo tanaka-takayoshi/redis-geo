@@ -2,7 +2,15 @@
 
 Redis GEO is a simple example showing how to make use of [Redis 3.2.0 new GEO capabilities](http://antirez.com/news/104):
 
-[![](https://raw.githubusercontent.com/ServiceStack/Assets/master/img/livedemos/redis-geo/redisgeo-screenshot.png)](http://redisgeo.servicestack.net)
+[![](https://raw.githubusercontent.com/ServiceStack/Assets/master/img/livedemos/redis-geo/redisgeo-screenshot.png)]
+
+## How to deploy into your OpenShift
+
+```
+$ oc new-app https://github.com/ure/openshift-redis.git --name=redis-geo
+$ oc new-app --template=s2i-aspnet -p APPLICATION_NAME=georedis,GIT_URI=https://github.com/tanaka-takayoshi/redis-geo.git,GIT_CONTEXT_DIR=src,GIT_REF=openshift -l app=georedis
+```
+
 
 > Live Demo: http://redisgeo.servicestack.net
 
